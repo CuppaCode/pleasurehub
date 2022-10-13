@@ -87,11 +87,3 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
-
-function custom_function(){
-	echo 'dit is eer test';
-}
-add_action('woocommerce_before_shop_loop', 'custom_function');
-
-
-// woocommerce_before_shop_loop, woocommerce_template_loop_product_thumbnail
