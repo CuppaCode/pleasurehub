@@ -15616,13 +15616,14 @@ figure.woocommerce-product-gallery__wrapper {
   align-items: center;
 }
 .announcement-bar__list li .bi {
-  background-color: var(--bs-icon-background);
+  background-color: #0095cf;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   margin-right: 6px;
+  color: white;
 }
 
 .has-blue-color,

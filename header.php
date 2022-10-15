@@ -37,7 +37,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
                         </li>
 
                         <li>
-                            <i class="bi bi-envolope rounded-circle"></i>
+                            <i class="bi bi-envelope rounded-circle"></i>
                             <a href="mailto:info@ewmaterialen.nl">info@ewmaterialen.nl</a>
                         </li>
                     </ul>
@@ -62,7 +62,15 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
     </div>
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<header id="wrapper-navbar">
+	<header id="wrapper-navbar" class="site-header">
+
+        <div class="container">
+            <div class="row">
+                <div class="col site-header__logo">
+                    <!-- Plek voor custom logo -->
+                </div>
+            </div>
+        </div>
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
