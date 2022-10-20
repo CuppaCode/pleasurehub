@@ -7,7 +7,6 @@
         <div class="categories__col col-md-4 col-md-12">
             
             <img src="" alt="" class="" loading="lazy">
-            <a href="#" class="stretched-link"></a>
         </div>
     </div>
 </section>
