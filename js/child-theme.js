@@ -9296,6 +9296,15 @@
 	  }
 	})();
 
+	// Add your custom JS here.
+	(() => {
+	  const myCarouselElement = document.querySelector('#mainCarousel');
+	  new bootstrap.Carousel(myCarouselElement, {
+	    interval: 2000,
+	    wrap: false
+	  });
+	})();
+
 	exports.Alert = alert;
 	exports.Button = button;
 	exports.Carousel = carousel;

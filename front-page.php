@@ -26,6 +26,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<main class="site-main" id="main">
+
+				<?php get_template_part('template-parts/carousel'); ?>
+
+				<?php get_template_part('template-parts/popular-products'); ?>
+
+				<?php get_template_part('template-parts/categories'); ?>
                 
 				<?php
 				while ( have_posts() ) {

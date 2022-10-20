@@ -33,12 +33,12 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
                     <ul class="announcement-bar__list">
                         <li>
                             <i class="bi bi-telephone rounded-circle"></i>
-                            <a href="tel: +31 642 12 231">+31 642 12 231</a>
+                            <a href="tel: +31 642 12 231" class="text-decoration-none">+31 642 12 231</a>
                         </li>
 
                         <li>
                             <i class="bi bi-envelope rounded-circle"></i>
-                            <a href="mailto:info@ewmaterialen.nl">info@ewmaterialen.nl</a>
+                            <a href="mailto:info@ewmaterialen.nl" class="text-decoration-none"> info@ewmaterialen.nl</a>
                         </li>
                     </ul>
                 </div>
@@ -64,10 +64,25 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<!-- ******************* The Navbar Area ******************* -->
 	<header id="wrapper-navbar" class="site-header">
 
-        <div class="container">
-            <div class="row">
-                <div class="col site-header__logo">
+        <div class="container py-2">
+            <div class="row align-items-center">
+
+                <div class="col site-header__logo d-flex justify-content-center justify-content-md-start pb-2">
                     <!-- Plek voor custom logo -->
+                    <?php the_custom_logo(); ?>
+                </div>
+                
+                <div class="col-sm-12 col-md-5 pb-2">
+                    <?php aws_get_search_form( true ); ?>
+                </div>
+
+                <div class="col cart d-flex justify-content-center justify-content-md-end align-items-center py-2">
+                    <a href="<?php echo wc_get_cart_url(); ?>"><i class="bi bi-bag-dash p-2"></i></a>
+                    <a 
+                        class="cart-customlocation" 
+                        href="<?php echo wc_get_cart_url(); ?>" 
+                        title="<?php _e( 'View your shopping cart' ); ?>">
+                        <?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> – <?php echo WC()->cart->get_cart_total(); ?></a>
                 </div>
             </div>
         </div>

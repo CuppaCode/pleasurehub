@@ -17,7 +17,7 @@
             align-items: center;
 
             .bi {
-                background-color: $lightblue;
+                background-color: $lightGreen;
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
@@ -27,5 +27,47 @@
                 color: white;
             }
         }
+    }
+}
+
+.site-header {
+    &__logo {
+        img {
+            max-height: 7rem;
+            width: auto;
+        }
+    }
+
+    .aws-search-field {
+        @extend .p-4;
+        font-size: .9rem;
+        border-radius: 20px!important;
+    }
+}
+
+/* Main menu */
+.navbar {
+    @extend .p-md-0;
+
+    .main-navigation {
+        font-weight: 600;
+    
+        .current-menu-item {
+            background-color: $lightGreen;
+        }
+    
+        a.nav-link {
+            color: $white;
+            padding: .6rem 1.4rem;
+        }
+    }
+}
+
+/** Front page */
+
+/** Slider **/
+.carousel {
+    .carousel-control-prev, .carousel-control-next {
+        width: 9%;
     }
 }
