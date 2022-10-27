@@ -71,3 +71,22 @@
         width: 9%;
     }
 }
+
+/** Footer **/
+footer {
+    ul {
+        @extend .m-0;
+        @extend .p-0;
+        @extend .list-unstyled;
+
+        li {
+            @extend .nav-item;
+            @extend .mb-2;
+    
+            a {
+                @extend .text-decoration-none;
+                @extend .text-muted;
+            }
+        }
+    }
+}
