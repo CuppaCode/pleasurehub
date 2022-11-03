@@ -50,13 +50,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
                             <?php the_custom_logo(); ?>
 						</a>
-						<p class="text-muted">© 2021</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="d-flex justify-content-between py-4 my-4 border-top">
-				<p>© 2021 Company, Inc. All rights reserved.</p>
+				<p>© <?= date('Y') ?> EWmaterialen.</p>
 				<ul class="list-unstyled d-flex">
 					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
 					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>

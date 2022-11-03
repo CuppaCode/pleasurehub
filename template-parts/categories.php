@@ -17,31 +17,36 @@ $product_categories = get_terms($args);
     <h2 class="text-center pt-5">Categorieen</h2>
     <p class="text-center">Een greep uit onze categorieen</p>
     
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
 
         <?php foreach( $product_categories as $category ) : ?>
+
             <div class="col">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="<?= get_stylesheet_directory_uri(). '/img/slider/zonnepaneel-1.jpg'; ?>" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $category->name; ?></h5>
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded shadow-lg" style="background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7) ), url('<?= get_stylesheet_directory_uri(). '/img/slider/zonnepaneel-1.jpg'; ?>'); background-position: 50% 50%;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><?= $category->name; ?></h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" class="rounded-circle border border-white" width="32" height="32">
+                            </li>
 
                             <?php if (!empty( $category->description ) ) : ?>
 
-                                <p class="card-text"><?= $category->description ?></p>
+                                <li class="d-flex align-items-center me-3">
+                                    <small><?= $category->description ?></small>
+                                </li>
 
                             <?php endif; ?>
-                            
-                            <a href="<?= get_term_link( $category ); ?>" class="btn btn-outline-primary btn-block">Naar categorie</a>
-                        </div>
-                        </div>
+
+                            <li class="d-flex align-items-center">
+                                <small><?= $category->count ?: 0 ?> Producten</small>
+                            </li>
+                            <a class="stretched-link" href="<?= get_term_link( $category ); ?>"></a>
+                        </ul>
                     </div>
                 </div>
             </div>
+
         <?php endforeach; ?>
 
     </div>
