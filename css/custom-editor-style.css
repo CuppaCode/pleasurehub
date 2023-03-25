@@ -170,11 +170,11 @@ sup {
 }
 
 a {
-  color: #4ecca3;
+  color: #752776;
   text-decoration: underline;
 }
 a:hover {
-  color: #3ea382;
+  color: #5e1f5e;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -207,7 +207,7 @@ pre code {
 
 code {
   font-size: 0.875em;
-  color: #d63384;
+  color: #D3489A;
   word-wrap: break-word;
 }
 a > code {
@@ -424,9 +424,9 @@ progress {
 
 :root {
   --bs-blue: #004C98;
-  --bs-indigo: #6610f2;
+  --bs-indigo: #752776;
   --bs-purple: #5533ff;
-  --bs-pink: #d63384;
+  --bs-pink: #D3489A;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
@@ -445,16 +445,16 @@ progress {
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #4ecca3;
-  --bs-secondary: #6c757d;
+  --bs-primary: #752776;
+  --bs-secondary: #D3489A;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 78, 204, 163;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-primary-rgb: 117, 39, 118;
+  --bs-secondary-rgb: 211, 72, 154;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -542,27 +542,27 @@ progress {
 }
 
 .table-primary {
-  --bs-table-bg: #dcf5ed;
-  --bs-table-striped-bg: #d1e9e1;
+  --bs-table-bg: #e3d4e4;
+  --bs-table-striped-bg: #d8c9d9;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #c6ddd5;
+  --bs-table-active-bg: #ccbfcd;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #cce3db;
+  --bs-table-hover-bg: #d2c4d3;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #c6ddd5;
+  border-color: #ccbfcd;
 }
 
 .table-secondary {
-  --bs-table-bg: #e2e3e5;
-  --bs-table-striped-bg: #d7d8da;
+  --bs-table-bg: #f6daeb;
+  --bs-table-striped-bg: #eacfdf;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #cbccce;
+  --bs-table-active-bg: #ddc4d4;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #d1d2d4;
+  --bs-table-hover-bg: #e4cad9;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #cbccce;
+  border-color: #ddc4d4;
 }
 
 .table-success {
@@ -823,12 +823,12 @@ progress {
 
 .has-indigo-color,
 .has-indigo-color:visited {
-  color: #6610f2;
+  color: #752776;
 }
 
 .has-indigo-background-color {
-  background-color: #6610f2;
-  border-color: #6610f2;
+  background-color: #752776;
+  border-color: #752776;
 }
 
 .has-purple-color,
@@ -843,12 +843,12 @@ progress {
 
 .has-pink-color,
 .has-pink-color:visited {
-  color: #d63384;
+  color: #D3489A;
 }
 
 .has-pink-background-color {
-  background-color: #d63384;
-  border-color: #d63384;
+  background-color: #D3489A;
+  border-color: #D3489A;
 }
 
 .has-red-color,
@@ -943,22 +943,22 @@ progress {
 
 .has-primary-color,
 .has-primary-color:visited {
-  color: #4ecca3;
+  color: #752776;
 }
 
 .has-primary-background-color {
-  background-color: #4ecca3;
-  border-color: #4ecca3;
+  background-color: #752776;
+  border-color: #752776;
 }
 
 .has-secondary-color,
 .has-secondary-color:visited {
-  color: #6c757d;
+  color: #D3489A;
 }
 
 .has-secondary-background-color {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #D3489A;
+  border-color: #D3489A;
 }
 
 .has-success-color,

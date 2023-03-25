@@ -17,7 +17,7 @@
             align-items: center;
 
             .bi {
-                background-color: $lightGreen;
+                background-color: $secondary;
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
@@ -31,6 +31,11 @@
 }
 
 .site-header {
+    position: sticky;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+
     &__logo {
         img {
             max-height: 7rem;
@@ -53,7 +58,7 @@
         font-weight: 600;
     
         .current-menu-item {
-            background-color: $lightGreen;
+            background-color: $secondary;
         }
     
         a.nav-link {
@@ -89,4 +94,13 @@ footer {
             }
         }
     }
+}
+
+/** Woocommerce **/
+.woocommerce span.onsale {
+    background-color: $primary;
+}
+
+.woocommerce ul.products li.product .price {
+    color: $secondary;
 }

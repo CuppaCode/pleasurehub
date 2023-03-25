@@ -38,7 +38,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 
                         <li>
                             <i class="bi bi-envelope rounded-circle"></i>
-                            <a href="mailto:info@ewmaterialen.nl" class="text-decoration-none"> info@ewmaterialen.nl</a>
+                            <a href="mailto:info@pleasurehub.nl" class="text-decoration-none"> info@pleasurehub.nl</a>
                         </li>
                     </ul>
                 </div>

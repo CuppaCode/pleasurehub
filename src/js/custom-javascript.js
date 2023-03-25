@@ -1,10 +1,10 @@
 // Add your custom JS here.
-(()=>{
-    const myCarouselElement = document.querySelector('#mainCarousel');
+// (()=>{
+//     const myCarouselElement = document.querySelector('#mainCarousel');
 
-    const carousel = new bootstrap.Carousel(myCarouselElement, {
-        interval: 2000,
-        wrap: false
-    });
+//     const carousel = new bootstrap.Carousel(myCarouselElement, {
+//         interval: 2000,
+//         wrap: false
+//     });
 
-})();
+// })();

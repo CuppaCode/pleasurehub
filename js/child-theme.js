@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.1.0 (https://understrap.com)
-  * Copyright 2013-2022 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2023 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
   */
 (function (global, factory) {
@@ -9294,15 +9294,6 @@
 	      }
 	    }, false);
 	  }
-	})();
-
-	// Add your custom JS here.
-	(() => {
-	  const myCarouselElement = document.querySelector('#mainCarousel');
-	  new bootstrap.Carousel(myCarouselElement, {
-	    interval: 2000,
-	    wrap: false
-	  });
 	})();
 
 	exports.Alert = alert;

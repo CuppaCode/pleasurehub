@@ -27,7 +27,7 @@ $product_categories = get_terms($args);
                         <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><?= $category->name; ?></h2>
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" class="rounded-circle border border-white" width="32" height="32">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/img/favicon.png'?>" alt="favicon pleasurehub" class="rounded-circle" width="32" height="32">
                             </li>
 
                             <?php if (!empty( $category->description ) ) : ?>
