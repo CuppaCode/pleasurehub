@@ -77,7 +77,11 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
                 </div>
 
                 <div class="col cart d-flex justify-content-center justify-content-md-end align-items-center py-2">
-                    <a href="<?php echo wc_get_cart_url(); ?>"><i class="bi bi-bag-dash p-2"></i></a>
+                    <a class="d-flex align-items-center" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
+                        <i class="bi bi-person fs-4 p-2"></i>
+                        <?php _e('Mijn Account'); ?>
+                    </a>
+                    <a href="<?php echo wc_get_cart_url(); ?>"><i class="bi bi-bag-dash fs-5 p-2"></i></a>
                     <a 
                         class="cart-customlocation" 
                         href="<?php echo wc_get_cart_url(); ?>" 
