@@ -25,7 +25,6 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
-
     <div class="d-none d-md-block announcement-bar py-2">
         <div class="container">
             <div class="row">
@@ -57,6 +56,15 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-none d-md-block announcement-bar py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <span> test </span>
+                </div
             </div>
         </div>
     </div>
