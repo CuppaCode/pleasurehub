@@ -1,3 +1,117 @@
+/** Bootstrap **/
+.btn {
+    padding: .4rem 1.5rem;
+    font-weight: bolder;
+    border-radius: $border_radius;
+}
+
+.btn-secondary {
+    color: white;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.btn-outline-secondary {
+    &:hover {
+        color: white;
+    }
+}
+
+/** End Bootstrap **/
+
+/** Woocommerce **/
+
+/** Product detail **/
+.woocommerce span.onsale {
+    background-color: $secondary;
+    left: 0;
+    top: $item_spacing;
+    border-radius: $border_radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: .4rem 1.5rem;
+}
+
+.woocommerce-product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: $item_spacing;
+
+    .flex-viewport {
+        border-radius: 6px;
+    }
+
+    .flex-control-nav {
+        display: flex;
+        gap: $item_spacing;
+
+        li {
+            img {
+                border-radius: 6px;
+            }
+        }
+    }
+
+}
+
+.btn-add-to-cart {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2.5rem;
+
+    i {
+        font-size: 1.5rem;
+        margin-left: $item_spacing;
+    }
+}
+
+.woocommerce div.product form.cart {
+    display: flex;
+    align-items: stretch;
+    gap: $item_spacing;
+
+    &::before {
+        content: unset;
+    }
+}
+
+.woocommerce .quantity .qty {
+    height: 100%;
+}
+
+/** Product list/overview **/
+.woocommerce ul.products li.product {
+
+    .onsale {
+        margin: 0;
+        top: $item_spacing;
+        border-top-left-radius: $border_radius;
+        border-bottom-left-radius: $border_radius;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .price {
+        color: $secondary;
+    }
+
+    a img {
+        border-radius: $border_radius;
+    }
+
+    .add-to-cart-container {
+        .add_to_cart_button {
+            width: 100%;
+        }
+    }
+}
+
+
+/** End Woocommerce **/
+
+
 /** header */
 
 .announcement-bar {
@@ -94,13 +208,4 @@ footer {
             }
         }
     }
-}
-
-/** Woocommerce **/
-.woocommerce span.onsale {
-    background-color: $primary;
-}
-
-.woocommerce ul.products li.product .price {
-    color: $secondary;
 }

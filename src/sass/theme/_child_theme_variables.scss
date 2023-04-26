@@ -24,6 +24,10 @@ $purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
 $primary: $indigo;  // Once we've changed the value, we'll also make it the primary brand color.
 $secondary: $pink;
 
+$item_spacing: 15px;
+$block_spacing: 100px;
+$border_radius: 6px;
+
 $utilities: (
     "rounded": (
         property: border-radius,
