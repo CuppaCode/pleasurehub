@@ -25,34 +25,28 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
-    <div class="d-none d-md-block announcement-bar py-2">
+    <div class="d-none d-md-block top-menu-bar py-2">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <ul class="announcement-bar__list">
+                <div class="col-md-6">
+                    <ul class="usp-bar__list">
                         <li>
-                            <i class="bi bi-telephone rounded-circle"></i>
-                            <a href="tel: +31 642 12 231" class="text-decoration-none">+31 642 12 231</a>
+                            Gratis verzending
                         </li>
 
                         <li>
-                            <i class="bi bi-envelope rounded-circle"></i>
-                            <a href="mailto:info@pleasurehub.nl" class="text-decoration-none"> info@pleasurehub.nl</a>
+                            30 dagen niet goed geld terug
+                        </li>
+
+                        <li>
+                            24/7 klant support
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-8 d-flex justify-content-end">
-                    <ul class="announcement-bar__list">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <ul class="service-bar__list">
                         <li>
-                            <i class="bi bi-truck rounded-circle"></i> Gratis verzending
-                        </li>
-
-                        <li>
-                            <i class="bi bi-clock-history rounded-circle"></i> 30 dagen niet goed geld terug
-                        </li>
-
-                        <li>
-                            <i class="bi bi-person rounded-circle"></i> 24/7 klant support
+                            <a href="#">Klantenservice</a>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +58,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
             <div class="row">
                 <div class="col-md-12 text-center">
                     <span> test </span>
-                </div
+                </div>
             </div>
         </div>
     </div>
@@ -86,15 +80,18 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 
                 <div class="col cart d-flex justify-content-center justify-content-md-end align-items-center py-2">
                     <a class="d-flex align-items-center" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
-                        <i class="bi bi-person fs-4 p-2"></i>
-                        <?php _e('Mijn Account'); ?>
+                        <i class="bi bi-person fs-1"></i>
+                        <span><?php _e('Mijn Account'); ?></span>
                     </a>
-                    <a href="<?php echo wc_get_cart_url(); ?>"><i class="bi bi-bag-dash fs-5 p-2"></i></a>
-                    <a 
-                        class="cart-customlocation" 
-                        href="<?php echo wc_get_cart_url(); ?>" 
-                        title="<?php _e( 'View your shopping cart' ); ?>">
-                        <?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> – <?php echo WC()->cart->get_cart_total(); ?></a>
+                    <a class="d-flex align-items-center" href="#">
+                        <i class="bi bi-heart fs-1"></i>
+                        <span><?php _e('Wishlist'); ?></span>
+                    </a>
+                    <a class="d-flex align-items-center parent-cart-count" href="<?php echo wc_get_cart_url(); ?>">
+                        <i class="bi bi-bag-dash fs-1 "><div class="cart-count"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></div></i>
+                        <span><?php _e('Winkelwagen'); ?></span>
+                    </a>
+                    
                 </div>
             </div>
         </div>
