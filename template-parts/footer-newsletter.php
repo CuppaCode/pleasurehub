@@ -20,9 +20,10 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="text-center">
-                    <h2 class="newsletter-title">test</h2>
-                    <p></p>
+                    <h2 class="newsletter-title"><?php the_field('newslettertitle', 'option'); ?></h2>
+                    <p class="newsletter-text"><?php the_field('newslettertext', 'option'); ?></p>
                 </div>
+
                 <div class="footer-newsletter-form">
                     <form action="https://pleasurehub.us21.list-manage.com/subscribe/post?u=9e8a7d1226b940645192ffe36&amp;id=3ceb9670ec&amp;f_id=008f51e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-inline validate" target="_self">
                          <div class="input-group w-auto">

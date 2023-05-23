@@ -19,6 +19,10 @@
     }
 }
 
+#content {
+    outline: 0;
+}
+
 /** End Bootstrap **/
 
 /** Woocommerce **/
@@ -276,13 +280,16 @@
         font-size: 12px;
     }
 
-    &footer {
-        ul {
+    ul {
 
-            li {
-                margin-bottom: 0;
-            }
+        li {
+            line-height: 12px;
         }
+    }
+    
+    .footer-info p {
+        font-size: 14px;
+        line-height: 18px;
     }
     
 }
@@ -293,7 +300,18 @@
     .newsletter-title {
         font-size: 24px;
         color: $white;
-        padding-bottom: 16px;
+        margin-top: 15px;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+
+    .newsletter-text {
+        color: $white;
+        padding-bottom: 25px;
+    }
+
+    .footer-newsletter-form {
+        padding-bottom: 25px;
     }
 }
 

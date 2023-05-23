@@ -105,3 +105,16 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	$fragments['a.cart-customlocation'] = ob_get_clean();
 	return $fragments;
 }
+
+// Adding option page for ACF
+if( function_exists( 'acf_add_options_page')  ) {
+    
+	acf_add_options_page(array(
+        'page_title'    => 'PleasureHub Settings',
+        'menu_title'    => 'PH Settings',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+    
+}

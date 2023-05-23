@@ -15604,6 +15604,10 @@ figure.woocommerce-product-gallery__wrapper {
   color: white;
 }
 
+#content {
+  outline: 0;
+}
+
 /** End Bootstrap **/
 /** Woocommerce **/
 /** Product detail **/
@@ -15805,8 +15809,12 @@ figure.woocommerce-product-gallery__wrapper {
   color: #000;
   font-size: 12px;
 }
-#wrapper-footerfooter ul li {
-  margin-bottom: 0;
+#wrapper-footer ul li {
+  line-height: 12px;
+}
+#wrapper-footer .footer-info p {
+  font-size: 14px;
+  line-height: 18px;
 }
 
 #wrapper-footer-newsletter {
@@ -15815,7 +15823,16 @@ figure.woocommerce-product-gallery__wrapper {
 #wrapper-footer-newsletter .newsletter-title {
   font-size: 24px;
   color: #fff;
-  padding-bottom: 16px;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+#wrapper-footer-newsletter .newsletter-text {
+  color: #fff;
+  padding-bottom: 25px;
+}
+#wrapper-footer-newsletter .footer-newsletter-form {
+  padding-bottom: 25px;
 }
 
 .has-blue-color,

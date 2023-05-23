@@ -27,32 +27,30 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<footer class="py-5">
 				<div class="row">
-                    <div class="col-2">
+                    <div class="col-md-2">
 						<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
                             <?php dynamic_sidebar( 'footer-1' ); ?>
                         <?php endif; ?>
 					</div>
 
 
-					<div class="col-2">
+					<div class="col-md-2">
 						<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
                             <?php dynamic_sidebar( 'footer-2' ); ?>
                         <?php endif; ?>
 					</div>
 
 
-					<div class="col-2">
+					<div class="col-md-2">
 						<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
                             <?php dynamic_sidebar( 'footer-3' ); ?>
                         <?php endif; ?>
 					</div>
 
-					<div class="col-4 offset-1">
-					<div class="col">
-						<a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                            <?php the_custom_logo(); ?>
-						</a>
-						</div>
+					<div class="col-md-4 offset-md-1 footer-info">
+					<?php if ( is_active_sidebar( 'footer-4' ) ) : ?>
+						<?php dynamic_sidebar( 'footer-4' ); ?>
+					<?php endif; ?>
 					</div>
 				</div>
 
