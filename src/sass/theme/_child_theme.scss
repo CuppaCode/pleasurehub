@@ -268,6 +268,36 @@
 }
 
 /** Footer **/
+#wrapper-footer {
+    background-color: $lighterGray;
+
+    a {
+        color: $black;
+        font-size: 12px;
+    }
+
+    &footer {
+        ul {
+
+            li {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+}
+
+#wrapper-footer-newsletter {
+    background-color: $pink;
+
+    .newsletter-title {
+        font-size: 24px;
+        color: $white;
+        padding-bottom: 16px;
+    }
+}
+
+
 footer {
     ul {
         @extend .m-0;

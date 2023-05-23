@@ -15,6 +15,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
+<?php get_template_part( 'template-parts/footer', 'newsletter' ); ?>
+
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
@@ -55,7 +57,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 
 				<div class="d-flex justify-content-between py-4 my-4 border-top">
-				<p>© <?= date('Y') ?> EWmaterialen.</p>
+				<p>© <?= date('Y') ?> Pleasurehub.</p>
 				<ul class="list-unstyled d-flex">
 					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
 					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
