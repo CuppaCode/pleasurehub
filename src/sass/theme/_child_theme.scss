@@ -19,6 +19,10 @@
     }
 }
 
+#content {
+    outline: 0;
+}
+
 /** End Bootstrap **/
 
 /** Woocommerce **/
@@ -268,6 +272,50 @@
 }
 
 /** Footer **/
+#wrapper-footer {
+    background-color: $lighterGray;
+
+    a {
+        color: $black;
+        font-size: 12px;
+    }
+
+    ul {
+
+        li {
+            line-height: 12px;
+        }
+    }
+    
+    .footer-info p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+}
+
+#wrapper-footer-newsletter {
+    background-color: $pink;
+
+    .newsletter-title {
+        font-size: 24px;
+        color: $white;
+        margin-top: 15px;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+
+    .newsletter-text {
+        color: $white;
+        padding-bottom: 25px;
+    }
+
+    .footer-newsletter-form {
+        padding-bottom: 25px;
+    }
+}
+
+
 footer {
     ul {
         @extend .m-0;
