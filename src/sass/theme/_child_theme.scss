@@ -178,6 +178,17 @@
     background-color: $pink;
     font-size: .8rem;
     color: white;
+
+    p {
+        margin-bottom: 0;
+
+        .header-discount-code {
+            background-color: $indigo; 
+            color: $white;
+            padding: 3px 5px;
+            font-weight: bold;
+        }
+    }
 }   
 
 .site-header {
