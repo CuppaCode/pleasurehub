@@ -11,53 +11,156 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-md navbar-dark main-menu-bar" aria-labelledby="main-nav-label">
+<nav id="navigation1" class="navigation <?php echo esc_attr( $container ); ?>">
+        <!-- Logo Area Start -->
+        <div class="nav-header">
+          <div class="nav-toggle"></div>
+        </div>
+        <!-- Search panel Start -->
+        
+        <!-- Main Menus Wrapper -->
+        <div class="nav-menus-wrapper">
+		<?php 
+		
 
-	<h2 id="main-nav-label" class="screen-reader-text">
-		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
-	</h2>
-
-
-	<div class="<?php echo esc_attr( $container ); ?> d-flex justify-content-center">
-
-		<!-- Your site title as branding in the menu -->
-		<?php if ( ! has_custom_logo() ) { ?>
-
-			<?php if ( is_front_page() && is_home() ) : ?>
-
-				<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
-			<?php else : ?>
-
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-			<?php endif; ?>
-
-			<?php
+		$menu_items = wp_get_nav_menu_items('menu-1',array ( 'post_type' => 'nav_menu_item'));
+		$menu_list = '';
+		$bool = false;
+		
+		// Determine first level menu items
+		foreach( $menu_items as $menu_item ) {
+			if( $menu_item->menu_item_parent == 0 ) {
+				
+				$top_level_menu[$menu_item->ID] = $menu_item;
+				$top_level_menu[$menu_item->ID]->children = [];
+			} else {
+				$lower_level_menu[] = $menu_item;
+			}
 		}
+
+		// Determine second level menu items
+		if(count($lower_level_menu) > 0){
+
+			foreach( $lower_level_menu as $lower_id => $lower_level_menu_item ) {
+				
+
+				foreach($top_level_menu as $id => $top_level_menu_item) {
+					
+					if($lower_level_menu_item->menu_item_parent == $id) {
+
+						$top_level_menu[$id]->children[$lower_level_menu_item->ID] = $lower_level_menu_item;
+						$top_level_menu[$id]->children[$lower_level_menu_item->ID]->children = [];
+						unset($lower_level_menu[$lower_id]);
+
+					}
+					
+				}
+
+			}
+
+		}
+
+		// Determine third level menu items
+		if(count($lower_level_menu) > 0){
+
+			foreach( $lower_level_menu as $lower_id => $lower_level_menu_item ) {
+				
+
+				foreach($top_level_menu as $id => $top_level_menu_item) {
+					
+					if(count($top_level_menu_item->children) > 0) {
+
+						foreach($top_level_menu_item->children as $second_level_id => $second_level_item){
+
+							if($lower_level_menu_item->menu_item_parent == $second_level_id) {
+
+								$second_level_item->children[$lower_id] = $lower_level_menu_item;
+								unset($lower_level_menu[$lower_id]);
+
+							}
+
+						}
+
+					}
+					
+				}
+
+			}
+
+		}
+ 
 		?>
-		<!-- end custom logo -->
 
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+		<ul class="nav-menu">
 
-		<!-- The WordPress Menu goes here -->
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav mr-auto main-navigation text-center',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-			)
-		);
-		?>
+			<?php foreach( $top_level_menu as $item ): ?>
 
-	</div><!-- .container(-fluid) -->
+				<li class="<?= $item->classes[0] ?>">
+					<a href="<?= $item->url ?>">
+						<?= $item->title ?>
+					</a>
 
-</nav><!-- .site-navigation -->
+					<?php $child_count = count($item->children); ?>
+
+					<?php if ($child_count > 0): ?>
+						
+						<div class="megamenu-panel">
+
+							<div class="megamenu-lists">
+
+								<?php 
+									
+									$col_class = 'list-col-5';
+
+									if($child_count < 5):
+
+										$col_class = 'list-col-'.$child_count;
+
+									endif;
+
+								?>
+								
+								<?php foreach ($item->children as $child): ?>
+
+									<ul class="megamenu-list <?= $col_class ?>">
+
+										<li class="megamenu-list-title">
+											<a href="<?= $child->url ?>">
+												<?= $child->title ?>
+											</a>
+										</li>
+
+										<?php $grand_child_count = count($child->children); ?>
+
+										<?php if ( $grand_child_count > 0): ?>
+
+											<?php foreach ($child->children as $child): ?>
+
+												<li>
+													<a href="<?= $child->url ?>">
+														<?= $child->title ?>
+													</a>
+												</li>
+
+											<?php endforeach; ?>
+
+										<?php endif ?>
+
+									</ul>
+
+								<?php endforeach; ?>
+
+							</div>
+
+						</div>
+
+					<?php endif; ?>
+				</li>
+
+			<?php endforeach; ?>
+
+		</ul>
+        </div>
+
+		
+      </nav>
