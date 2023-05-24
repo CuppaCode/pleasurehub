@@ -88,53 +88,78 @@ $container = get_theme_mod( 'understrap_container_type' );
 			}
 
 		}
-
-		// Dump the menu, if need be...
-		// echo '<pre>';
-		// var_dump($top_level_menu);
-		// echo '</pre>';
-
-
-
-		$menu_list .= '<ul class="nav-menu">' ."\n";
-		//$parent = $menu_item->ID;
-		
-
-		foreach( $top_level_menu as $menu_item ) {
-
-			if( count($menu_item->children) > 0) {
-
-				//$menu_list .= '<li class="'. $submenu->classes[0] .'"><a href="' . $submenu->url . '">' . $submenu->title . '</a></li>' ."\n";
-
-			} else {
-
-				$menu_list .= '<li>' ."\n";
-				$menu_list .= '<a href="' . $menu_item->url . '">' . $menu_item->title . '</a>' ."\n";
-				$menu_list .= '</li>' ."\n";
-
-			}
-		}
-		if( $bool == true && count( $menu_array ) > 0 ) {
-			
-
-			$menu_list .= '<li>' ."\n";
-			$menu_list .= '<a href="#">' . $menu_item->title ."\n";
-			$menu_list .= '<div class="megamenu-panel"><div class="megamenu-lists">';
-			if ( $menu_item->classes[0] == 'submenu-parent' ) {
-				$menu_list .= '<ul class="megamenu-list list-col-4">' ."\n";
-			}
-			
-			$menu_list .= implode( "\n", $menu_array );
-			$menu_list .= '</ul>' ."\n";
-			$menu_list .= '</div></div>';
-			
-		}
-         
-        $menu_list .= '</ul>' ."\n";
-
-		echo $menu_list;
  
 		?>
+
+		<ul class="nav-menu">
+
+			<?php foreach( $top_level_menu as $item ): ?>
+
+				<li class="<?= $item->classes[0] ?>">
+					<a href="<?= $item->url ?>">
+						<?= $item->title ?>
+					</a>
+
+					<?php $child_count = count($item->children); ?>
+
+					<?php if ($child_count > 0): ?>
+						
+						<div class="megamenu-panel">
+
+							<div class="megamenu-lists">
+
+								<?php 
+									
+									$col_class = 'list-col-5';
+
+									if($child_count < 5):
+
+										$col_class = 'list-col-'.$child_count;
+
+									endif;
+
+								?>
+								
+								<?php foreach ($item->children as $child): ?>
+
+									<ul class="megamenu-list <?= $col_class ?>">
+
+										<li class="megamenu-list-title">
+											<a href="<?= $child->url ?>">
+												<?= $child->title ?>
+											</a>
+										</li>
+
+										<?php $grand_child_count = count($child->children); ?>
+
+										<?php if ( $grand_child_count > 0): ?>
+
+											<?php foreach ($child->children as $child): ?>
+
+												<li>
+													<a href="<?= $child->url ?>">
+														<?= $child->title ?>
+													</a>
+												</li>
+
+											<?php endforeach; ?>
+
+										<?php endif ?>
+
+									</ul>
+
+								<?php endforeach; ?>
+
+							</div>
+
+						</div>
+
+					<?php endif; ?>
+				</li>
+
+			<?php endforeach; ?>
+
+		</ul>
         </div>
 
 		

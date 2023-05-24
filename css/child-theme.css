@@ -16006,7 +16006,7 @@ figure.woocommerce-product-gallery__wrapper {
 .nav-menu > li:hover > a,
 .nav-menu > li.active > a,
 .nav-menu > li.focus > a {
-  color: #27ae60;
+  color: #752776;
 }
 
 .nav-menu > li > a > i,
@@ -16176,7 +16176,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 .nav-search-button:hover .nav-search-icon {
-  color: #27ae60;
+  color: #752776;
 }
 
 .nav-search > form {
@@ -16328,7 +16328,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 .nav-dropdown > li:hover > a,
 .nav-dropdown > li.focus > a {
-  color: #27ae60;
+  color: #752776;
 }
 
 .nav-dropdown.nav-dropdown-left {
@@ -16385,7 +16385,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 .nav-dropdown > li:hover > a .submenu-indicator-chevron,
 .nav-dropdown > .focus > a .submenu-indicator-chevron {
-  border-color: transparent #27ae60 #27ae60 transparent;
+  border-color: transparent #752776 #752776 transparent;
 }
 
 .navigation-landscape .nav-dropdown.nav-dropdown-left .submenu-indicator {
@@ -16664,7 +16664,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 .megamenu-list > li > a:hover {
-  background-color: #27ae60;
+  background-color: #752776;
   color: #fff;
 }
 
@@ -16708,7 +16708,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 .nav-dropdown > li > a:hover,
 .nav-dropdown > li > a:focus {
-  color: #27ae60;
+  color: #752776;
 }
 
 .main_header_area.sticky {

@@ -466,7 +466,7 @@ footer {
   .nav-menu > li:hover > a,
   .nav-menu > li.active > a,
   .nav-menu > li.focus > a {
-    color: #27ae60;
+    color: $primary;
   }
   .nav-menu > li > a > i,
   .nav-menu > li > a > [class*="ion-"] {
@@ -619,7 +619,7 @@ footer {
     transform: translateX(-50%);
   }
   .nav-search-button:hover .nav-search-icon {
-    color: #27ae60;
+    color: $primary;
   }
   .nav-search > form {
     width: 100%;
@@ -752,7 +752,7 @@ footer {
   }
   .nav-dropdown > li:hover > a,
   .nav-dropdown > li.focus > a {
-    color: #27ae60;
+    color: $primary;
   }
   .nav-dropdown.nav-dropdown-left {
     right: 0;
@@ -812,7 +812,7 @@ footer {
   }
   .nav-dropdown > li:hover > a .submenu-indicator-chevron,
   .nav-dropdown > .focus > a .submenu-indicator-chevron {
-    border-color: transparent #27ae60 #27ae60 transparent;
+    border-color: transparent $primary $primary transparent;
   }
   .navigation-landscape .nav-dropdown.nav-dropdown-left .submenu-indicator {
     left: 10px;
@@ -1050,7 +1050,7 @@ footer {
     font-size: 13px;
   }
   .megamenu-list > li > a:hover {
-    background-color: #27ae60;
+    background-color: $primary;
     color: #fff;
   }
   .megamenu-list > li.megamenu-list-title > a {
@@ -1085,7 +1085,7 @@ footer {
   }
   .nav-dropdown > li > a:hover,
   .nav-dropdown > li > a:focus {
-    color: #27ae60;
+    color: $primary;
   }
   .main_header_area.sticky {
     width: 100%;
