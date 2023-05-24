@@ -69,7 +69,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <span> test </span>
+                    <span> <?php the_field('announcementheader', 'option'); ?> </span>
                 </div>
             </div>
         </div>

@@ -19,6 +19,10 @@
     }
 }
 
+#content {
+    outline: 0;
+}
+
 /** End Bootstrap **/
 
 /** Woocommerce **/
@@ -174,6 +178,17 @@
     background-color: $pink;
     font-size: .8rem;
     color: white;
+
+    p {
+        margin-bottom: 0;
+
+        .header-discount-code {
+            background-color: $indigo; 
+            color: $white;
+            padding: 3px 5px;
+            font-weight: bold;
+        }
+    }
 }   
 
 .site-header {
@@ -268,6 +283,50 @@
 }
 
 /** Footer **/
+#wrapper-footer {
+    background-color: $lighterGray;
+
+    a {
+        color: $black;
+        font-size: 12px;
+    }
+
+    ul {
+
+        li {
+            line-height: 12px;
+        }
+    }
+    
+    .footer-info p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+}
+
+#wrapper-footer-newsletter {
+    background-color: $pink;
+
+    .newsletter-title {
+        font-size: 24px;
+        color: $white;
+        margin-top: 15px;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+
+    .newsletter-text {
+        color: $white;
+        padding-bottom: 25px;
+    }
+
+    .footer-newsletter-form {
+        padding-bottom: 25px;
+    }
+}
+
+
 footer {
     ul {
         @extend .m-0;
@@ -1085,7 +1144,7 @@ footer {
   }
   .nav-dropdown > li > a:hover,
   .nav-dropdown > li > a:focus {
-    color: $primary;
+    color: $secondary;
   }
   .main_header_area.sticky {
     width: 100%;

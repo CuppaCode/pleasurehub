@@ -15604,6 +15604,10 @@ figure.woocommerce-product-gallery__wrapper {
   color: white;
 }
 
+#content {
+  outline: 0;
+}
+
 /** End Bootstrap **/
 /** Woocommerce **/
 /** Product detail **/
@@ -15727,6 +15731,15 @@ figure.woocommerce-product-gallery__wrapper {
   font-size: 0.8rem;
   color: white;
 }
+.announcement-bar p {
+  margin-bottom: 0;
+}
+.announcement-bar p .header-discount-code {
+  background-color: #752776;
+  color: #fff;
+  padding: 3px 5px;
+  font-weight: bold;
+}
 
 .site-header {
   position: -webkit-sticky;
@@ -15798,6 +15811,39 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 /** Footer **/
+#wrapper-footer {
+  background-color: #f1f1f1;
+}
+#wrapper-footer a {
+  color: #000;
+  font-size: 12px;
+}
+#wrapper-footer ul li {
+  line-height: 12px;
+}
+#wrapper-footer .footer-info p {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+#wrapper-footer-newsletter {
+  background-color: #D3489A;
+}
+#wrapper-footer-newsletter .newsletter-title {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+#wrapper-footer-newsletter .newsletter-text {
+  color: #fff;
+  padding-bottom: 25px;
+}
+#wrapper-footer-newsletter .footer-newsletter-form {
+  padding-bottom: 25px;
+}
+
 .navigation {
   width: 100%;
   height: 70px;
@@ -16708,7 +16754,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 .nav-dropdown > li > a:hover,
 .nav-dropdown > li > a:focus {
-  color: #752776;
+  color: #D3489A;
 }
 
 .main_header_area.sticky {
