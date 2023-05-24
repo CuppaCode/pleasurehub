@@ -15618,7 +15618,7 @@ figure.woocommerce-product-gallery__wrapper {
   border-radius: 6px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  padding: 0.4rem 1.5rem;
+  padding: 0.1rem 0.5rem;
 }
 
 .woocommerce-product-gallery {
@@ -16787,6 +16787,13 @@ figure.woocommerce-product-gallery__wrapper {
     width: 65%;
   }
 }
+.wpc-filter-content .wpc-filters-range-min,
+.wpc-filter-content .wpc-filters-range-max {
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #004C98;
