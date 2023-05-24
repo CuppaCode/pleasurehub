@@ -15731,6 +15731,15 @@ figure.woocommerce-product-gallery__wrapper {
   font-size: 0.8rem;
   color: white;
 }
+.announcement-bar p {
+  margin-bottom: 0;
+}
+.announcement-bar p .header-discount-code {
+  background-color: #752776;
+  color: #fff;
+  padding: 3px 5px;
+  font-weight: bold;
+}
 
 .site-header {
   position: -webkit-sticky;
