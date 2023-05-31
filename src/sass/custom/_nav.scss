@@ -11,7 +11,7 @@
     -webkit-tap-highlight-color: transparent;
   }
   .navigation-portrait {
-    height: 48px;
+    height: 60px;
   }
   .navigation-fixed {
     position: fixed;
@@ -70,7 +70,7 @@
     position: absolute;
     top: 50%;
     margin-top: -14px;
-    right: 15px;
+    left: 15px;
     display: none;
     cursor: pointer;
   }

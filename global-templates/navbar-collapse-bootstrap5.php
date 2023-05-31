@@ -11,10 +11,27 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="navigation1" class="navigation <?php echo esc_attr( $container ); ?>">
+<nav id="navigation1" class="navigation d-flex d-md-block justify-content-between align-items-center <?php echo esc_attr( $container ); ?>">
         <!-- Logo Area Start -->
-        <div class="nav-header">
+        <div class="nav-header justify-content-start">
           <div class="nav-toggle"></div>
+        </div>
+
+		<div class="d-flex d-md-none site-header__logo ps-5">
+		<?php the_custom_logo(); ?>
+		</div>
+
+		<div class="cart d-flex d-md-none justify-content-center justify-content-md-end align-items-center py-2">
+			<a class="d-flex align-items-center" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
+				<i class="bi bi-person fs-4"></i>
+			</a>
+			<a class="d-flex align-items-center" href="#">
+				<i class="bi bi-heart fs-4"></i>
+			</a>
+			<a class="d-flex align-items-center parent-cart-count" href="<?php echo wc_get_cart_url(); ?>">
+				<i class="bi bi-bag-dash fs-4"><div class="cart-count"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></div></i>
+			</a>
+                    
         </div>
         <!-- Search panel Start -->
         

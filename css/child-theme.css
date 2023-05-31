@@ -15749,8 +15749,13 @@ figure.woocommerce-product-gallery__wrapper {
   top: 0;
 }
 .site-header__logo img {
-  max-height: 7rem;
+  max-height: 4rem;
   width: auto;
+}
+@media screen and (min-width: 768px) {
+  .site-header__logo img {
+    max-height: 7rem;
+  }
 }
 .site-header .aws-search-field {
   font-size: 0.9rem;
@@ -15880,7 +15885,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 .navigation-portrait {
-  height: 48px;
+  height: 60px;
 }
 
 .navigation-fixed {
@@ -15951,7 +15956,7 @@ figure.woocommerce-product-gallery__wrapper {
   position: absolute;
   top: 50%;
   margin-top: -14px;
-  right: 15px;
+  left: 15px;
   display: none;
   cursor: pointer;
 }

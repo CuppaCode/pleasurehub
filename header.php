@@ -78,29 +78,29 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<!-- ******************* The Navbar Area ******************* -->
 	<header id="wrapper-navbar" class="site-header">
 
-        <div class="container py-2">
-            <div class="row align-items-center">
+        <div class="container py-2 d-none d-md-block">
+            <div class="row align-items-center justify-content-end justify-content-md-start">
 
-                <div class="col site-header__logo d-flex justify-content-center justify-content-md-start pb-2">
+                <div class="d-none d-md-flex col-md-4 site-header__logo justify-content-center justify-content-md-start pb-2">
                     <!-- Plek voor custom logo -->
                     <?php the_custom_logo(); ?>
                 </div>
                 
-                <div class="col-sm-12 col-md-5 pb-2">
+                <div class="d-none d-md-flex col-6 col-md-5 pb-2">
                     <?php aws_get_search_form( true ); ?>
                 </div>
 
-                <div class="col cart d-flex justify-content-center justify-content-md-end align-items-center py-2">
+                <div class="d-none col-md-3 cart d-md-flex justify-content-center justify-content-md-end align-items-center py-2">
                     <a class="d-flex align-items-center" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
-                        <i class="bi bi-person fs-1"></i>
+                        <i class="bi bi-person fs-4"></i>
                         <span><?php _e('Mijn Account'); ?></span>
                     </a>
                     <a class="d-flex align-items-center" href="#">
-                        <i class="bi bi-heart fs-1"></i>
+                        <i class="bi bi-heart fs-4"></i>
                         <span><?php _e('Wishlist'); ?></span>
                     </a>
                     <a class="d-flex align-items-center parent-cart-count" href="<?php echo wc_get_cart_url(); ?>">
-                        <i class="bi bi-bag-dash fs-1 "><div class="cart-count"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></div></i>
+                        <i class="bi bi-bag-dash fs-4"><div class="cart-count"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></div></i>
                         <span><?php _e('Winkelwagen'); ?></span>
                     </a>
                     
