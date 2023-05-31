@@ -14,10 +14,19 @@ $product_categories = get_terms($args);
 
 <section class="categories py-3">
     
-    <h2 class="text-center pt-5">Categorieen</h2>
-    <p class="text-center">Een greep uit onze categorieen</p>
+    <div class="fancy-page-title">
+        <div class="fancy-page-subtitle col-md-10">
+            <h2>
+                Categorieen
+                <a href="#" class="flex more-content-url">
+                    <span>Bekijk meer</span>
+                </a>
+            </h2>
+            <p>Een greep uit onze categorieen</p>
+        </div> 
+    </div>
     
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 pb-5">
 
         <?php foreach( $product_categories as $key => $category ) : ?>
 

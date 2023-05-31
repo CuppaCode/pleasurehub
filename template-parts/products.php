@@ -8,19 +8,29 @@
 
 <section class="py-3">
     
-    <?php if ( $title ) : ?>
+    <div class="fancy-page-title">
+        <div class="fancy-page-subtitle">
+            <?php if ( $title ) : ?>
 
-        <h2 class="text-center pt-5"><?php echo $title ?></h2>
+                <h2>
+                    <?php echo $title ?>
+                    <a href="#" class="flex more-content-url">
+                        <span>Bekijk meer</span>
+                    </a>
+                </h2>
 
-    <?php endif ?>
+            <?php endif ?>
 
-    <?php if ( $subtitle ) : ?>
+            <?php if ( $subtitle ) : ?>
 
-        <p class="text-center"><?php echo $subtitle ?></p>
+                <p><?php echo $subtitle ?></p>
 
-    <?php endif ?>
+            <?php endif ?>
+        </div>
+            
+    </div>
     
-    <div class="pt-5">
+    <div class="pt-2">
 
         <?php if ( $shortcode ) : ?>
             
