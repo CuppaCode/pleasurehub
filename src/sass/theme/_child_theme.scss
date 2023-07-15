@@ -110,7 +110,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: calc($item_spacing * 2);
+    gap: $item_spacing;
+
+    @media screen and (min-width: 768px) {
+        gap: calc($item_spacing * 2);
+    }
 
     &::before {
         display: none;
@@ -118,9 +122,13 @@
 
 
     li.product {
-        width: calc(25% - calc((($item_spacing * 2) * 3) / 4));
-        float: none;
-        margin: 0;
+        width: calc(50% - calc($item_spacing / 2))!important;
+        float: none!important;
+        margin: 0!important;
+
+        @media screen and (min-width: 768px) {
+            width: calc(25% - calc((($item_spacing * 2) * 3) / 4))!important;
+        }
     
         .onsale {
             margin: 0px;
@@ -148,9 +156,14 @@
         a img {
             border-radius: $border_radius;
             border: 1px solid $lighterGray;
-            padding: calc($item_spacing * 2);
-            height: 300px;
+            padding: $item_spacing;
+            height: 200px;
             object-fit: contain;
+
+            @media screen and (min-width: 768px) {
+                padding: calc($item_spacing * 2);
+                height: 300px;
+            }
         }
     
         .add-to-cart-container {
