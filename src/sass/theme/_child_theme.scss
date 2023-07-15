@@ -38,13 +38,31 @@
     padding: .1rem .5rem;
 }
 
+.woocommerce div.product {
+
+    div.images a img {
+        height: 500px;
+        object-fit: contain;
+    }
+
+    p.price {
+        color: $secondary;
+        font: {
+            weight: bolder;
+            size: 1.5em;
+        }
+    }
+}
+
 .woocommerce-product-gallery {
     display: flex;
     flex-direction: column;
     gap: $item_spacing;
 
     .flex-viewport {
-        border-radius: 6px;
+        border-radius: $border_radius;
+        border: 1px solid $lighterGray;
+        padding: calc($item_spacing * 2);
     }
 
     .flex-control-nav {
@@ -53,7 +71,9 @@
 
         li {
             img {
-                border-radius: 6px;
+                border-radius: $border_radius;
+                border: 1px solid $lighterGray;
+                padding: calc($item_spacing * 2);
             }
         }
     }
@@ -86,31 +106,66 @@
 }
 
 /** Product list/overview **/
-.woocommerce ul.products li.product {
+.woocommerce ul.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: calc($item_spacing * 2);
 
-    .onsale {
-        margin: 0px;
-        top: $item_spacing;
-        border-top-left-radius: $border_radius;
-        border-bottom-left-radius: $border_radius;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+    &::before {
+        display: none;
     }
 
-    .price {
-        color: $secondary;
-    }
 
-    a img {
-        border-radius: $border_radius;
-    }
-
-    .add-to-cart-container {
-        .add_to_cart_button {
-            width: 100%;
+    li.product {
+        width: calc(25% - calc((($item_spacing * 2) * 3) / 4));
+        float: none;
+        margin: 0;
+    
+        .onsale {
+            margin: 0px;
+            top: $item_spacing;
+            border-top-left-radius: $border_radius;
+            border-bottom-left-radius: $border_radius;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    
+        .woocommerce-loop-product__title {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    
+        .price {
+            color: $secondary;
+            font: {
+                weight: bolder;
+                size: 1.5em;
+            }
+        }
+    
+        a img {
+            border-radius: $border_radius;
+            border: 1px solid $lighterGray;
+            padding: calc($item_spacing * 2);
+            height: 300px;
+            object-fit: contain;
+        }
+    
+        .add-to-cart-container {
+            .add_to_cart_button {
+                width: 100%;
+            }
         }
     }
+
 }
+
+.woocommerce nav.woocommerce-pagination {
+    text-align: right;
+}
+
 
 
 /** End Woocommerce **/

@@ -15621,6 +15621,17 @@ figure.woocommerce-product-gallery__wrapper {
   padding: 0.1rem 0.5rem;
 }
 
+.woocommerce div.product div.images a img {
+  height: 500px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.woocommerce div.product p.price {
+  color: #D3489A;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
 .woocommerce-product-gallery {
   display: flex;
   flex-direction: column;
@@ -15628,6 +15639,8 @@ figure.woocommerce-product-gallery__wrapper {
 }
 .woocommerce-product-gallery .flex-viewport {
   border-radius: 6px;
+  border: 1px solid #f1f1f1;
+  padding: 30px;
 }
 .woocommerce-product-gallery .flex-control-nav {
   display: flex;
@@ -15635,6 +15648,8 @@ figure.woocommerce-product-gallery__wrapper {
 }
 .woocommerce-product-gallery .flex-control-nav li img {
   border-radius: 6px;
+  border: 1px solid #f1f1f1;
+  padding: 30px;
 }
 
 .btn-add-to-cart {
@@ -15661,6 +15676,20 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 /** Product list/overview **/
+.woocommerce ul.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.woocommerce ul.products::before {
+  display: none;
+}
+.woocommerce ul.products li.product {
+  width: calc(25% - 22.5px);
+  float: none;
+  margin: 0;
+}
 .woocommerce ul.products li.product .onsale {
   margin: 0px;
   top: 15px;
@@ -15669,14 +15698,30 @@ figure.woocommerce-product-gallery__wrapper {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .woocommerce ul.products li.product .price {
   color: #D3489A;
+  font-weight: bolder;
+  font-size: 1.5em;
 }
 .woocommerce ul.products li.product a img {
   border-radius: 6px;
+  border: 1px solid #f1f1f1;
+  padding: 30px;
+  height: 300px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .woocommerce ul.products li.product .add-to-cart-container .add_to_cart_button {
   width: 100%;
+}
+
+.woocommerce nav.woocommerce-pagination {
+  text-align: right;
 }
 
 /** End Woocommerce **/

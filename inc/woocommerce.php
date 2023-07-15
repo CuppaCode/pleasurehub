@@ -173,3 +173,10 @@ if ( ! function_exists( 'understrap_quantity_input_classes' ) ) {
 		return $classes;
 	}
 }
+
+/** Hide currency symbol */
+add_filter( 'woocommerce_currency_symbol', 'remove_currency_symbol' );
+function remove_currency_symbol( $currency_symbol ) {
+  $currency_symbol = '';
+  return $currency_symbol;
+}
