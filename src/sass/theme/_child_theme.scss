@@ -220,6 +220,7 @@
                     height: 30px;
                     margin-right: 6px;
                     color: white;
+                    padding-right: 12px;
                 }
             }
         }
@@ -237,6 +238,16 @@
                 margin: 0 10px;
                 display: flex;
                 align-items: center;
+
+                .bi {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 6px;
+                }
             }
         }
     }
@@ -274,6 +285,10 @@
                 max-height: 7rem;
             }
         }
+    }
+
+    .search-barr div {
+        width: 100%
     }
 
     .aws-search-field {

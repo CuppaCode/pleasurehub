@@ -43,15 +43,15 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
                 <div class="col-md-6">
                     <ul class="usp-bar__list">
                         <li>
-                            Gratis verzending
+                            <i class="bi bi-truck"></i> Snelle levering
                         </li>
 
                         <li>
-                            30 dagen niet goed geld terug
+                            <i class="bi bi-check"></i> Kwaliteits producten
                         </li>
 
                         <li>
-                            24/7 klant support
+                            <i class="bi bi-box-seam"></i> Discreet verzonden
                         </li>
                     </ul>
                 </div>
@@ -86,7 +86,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
                     <?php the_custom_logo(); ?>
                 </div>
                 
-                <div class="d-none d-md-flex col-6 col-md-5 pb-2">
+                <div class="d-none d-md-flex col-6 col-md-5 pb-2 search-barr">
                     <?php aws_get_search_form( true ); ?>
                 </div>
 
