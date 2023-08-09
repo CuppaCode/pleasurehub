@@ -40,7 +40,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
     <div class="d-none d-md-block top-menu-bar py-2">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <ul class="usp-bar__list">
                         <li>
                             <i class="bi bi-truck"></i> Snelle levering
@@ -55,7 +55,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6 d-flex justify-content-end">
+                <div class="col-md-4 d-flex justify-content-end">
                     <ul class="service-bar__list">
                         <li>
                             <a href="#">Klantenservice</a>
