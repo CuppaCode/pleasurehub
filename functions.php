@@ -118,3 +118,6 @@ if( function_exists( 'acf_add_options_page')  ) {
     ));
     
 }
+
+// Add one-dc connection after export
+require_once get_theme_file_path( 'inc/one-dc.php' ); // Load connection to one-dc
