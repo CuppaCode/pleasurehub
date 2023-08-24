@@ -2,46 +2,65 @@
 
 $sections = $args['sections'];
 $section_amount = count($args['sections']);
+$favorites = $args['categories'];
 
 ?>
 
 <div class="container pb-4 px-0">
     <div class="row mb-4 g-0">
-        <div class="col-md-6 order-md-1">
+        <div class="col-md-6 order-md-1 hero-image-wrapper">
             <div class="hero-image" style="background-image: url('<?php echo $sections[0]['image'] ?>');">
             </div>
         </div>
-        <div class="col-md-6 order-md-12">
+        <div class="col-md-6 order-md-12 hero-info-wrapper">
             <div class="hero-info">
                 <div>
-                    <h1>De zomer is begonnen!</h1>
-                    <p>Maak de zomer nog warmer met onze producten.</p>
-                    <a class="btn btn-primary" href="#">Bekijk nu</a>
+                    <h1><?= $sections[0]['title'] ?? 'Title' ?></h1>
+
+                    <?php if ( $sections[0]['description'] ) : ?>
+
+                    <p>
+                        <?= $sections[0]['description'] ?>
+                    </p>
+
+                    <?php endif; ?>
+                    
+                    <?php if ( $sections[0]['link'] ) : ?>
+
+                        <a class="btn btn-primary" href="<?= $sections[0]['link']['url'] ?>"><?= $sections[0]['link']['title'] ?></a>
+
+                    <?php endif; ?>
                 </div>  
             </div>
         </div>
     </div>
 
     <?php 
-    $favorites = array(
-        'for-him' => array('Voor hem', '/test'),
-        'for-her' => array('Voor haar', '#'),
-        'for-koppels' => array('Voor koppels', '#'),
-        'populair' => array('Nu populair', '#'),
-        'our-choice' => array('Onze keuze', '#'),
-    );
+    // $favorites = array(
+    //     'for-him' => array('Voor hem', '/test'),
+    //     'for-her' => array('Voor haar', '#'),
+    //     'for-koppels' => array('Voor koppels', '#'),
+    //     'populair' => array('Nu populair', '#'),
+    //     'our-choice' => array('Onze keuze', '#'),
+    // );
+
+        // $favorites = get_terms(array(
+        //     'taxonomy' => 'product_cat',
+        //     'include' => $categories
+        // ));
     ?>
 
-    <div class="row mb-4">
+    <div class="row mb-4 favorite-wrapper">
         <?php foreach ($favorites as $favorite):
+
         printf('<div class="col">
                     <a href="%2$s" class="favorite-box">
                         <span>%1$s</span>
-                        <i class="bi bi-arrow-right"></i> 
+                        <i class="bi bi-arrow-right-short"></i> 
                     </a>
                 </div>', 
-                $favorite[0], 
-                $favorite[1], 
+                $favorite->name, 
+                get_term_link($favorite->term_id, 'product_cat'), 
             );
             
         endforeach; ?>

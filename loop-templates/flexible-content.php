@@ -32,6 +32,18 @@
 
                     break;
 
+                case 'banner':
+
+                    get_template_part('template-parts/banner', '', $item );
+
+                    break;
+
+                case 'text_block':
+
+                    get_template_part('template-parts/text-block', '', $item );
+
+                    break;
+
                 default:
 
                     //

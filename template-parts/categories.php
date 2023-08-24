@@ -5,6 +5,7 @@ $args = array(
     'number'     => $number,
     'orderby'    => $orderby,
     'order'      => $order,
+    'posts_per_page' => 3,
     'hide_empty' => $hide_empty,
     'include'    => $ids
 );
@@ -15,7 +16,7 @@ $product_categories = get_terms($args);
 <section class="categories py-3">
     
     <div class="fancy-page-title">
-        <div class="fancy-page-subtitle col-md-10">
+        <div class="fancy-page-subtitle">
             <h2>
                 Categorieen
                 <a href="#" class="flex more-content-url">
